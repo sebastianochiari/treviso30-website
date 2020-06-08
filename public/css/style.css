@@ -124,6 +124,11 @@ main {
   left: 1.5rem;
 }
 
+.bottom-center {
+    position: absolute;
+    bottom: 1rem;
+}
+
 .post-titolo {
     margin-bottom: .25rem;
     font-size: 2rem;
@@ -162,6 +167,41 @@ main {
 
 .post-lateralbanner-postrecenti {
     font-family: sans-serif !important;
+    font-weight: bolder;
+}
+
+.recent-card {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.recent-card > div > h6 {
+    margin: 0;
+}
+
+.recent-card-text {
+    font-size: 0.8rem !important;
+    font-weight: lighter !important;
+    margin: 0;
+}
+
+.recent-card-side-image {
+    width: 100%;
+}
+
+.recent-card-side-text {
+    margin-left: 1rem;
+}
+
+.splitscreen {
+    display: flex;
+}
+
+.left-1 {
+    flex: 1;
+}
+
+.right-2 {
+    flex: 2;
 }
 
 /** FOOTER **/

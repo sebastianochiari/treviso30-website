@@ -19,7 +19,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Hello, world!</title>
+    <title>Treviso30News - Informazione di Marca</title>
 </head>
 
 <body>

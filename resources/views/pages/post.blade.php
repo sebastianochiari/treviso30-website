@@ -24,73 +24,53 @@
 
 <body>
 
-    <div class="container">
+  <div id="header" class="container">
 
-        <header class="blog-header py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col">
-                    <a href="#">
-                        <img class="blog-logo" src="images/logo.jpg" alt="logo">
-                    </a>
-                </div>
-                <div class="col">
-                    <!-- INSERIRE BANNER PUBBLICITARIO -->
-                </div>
-            </div>
-        </header>
+      <header class="blog-header py-3">
+          <div class="flex-nowrap justify-content-between align-items-center">
+              <div class="text-center">
+                  <a class="blog-header-logo text-dark" href="#">
+                      Treviso 30 News
+                      <br>
+                      <div class="blog-header-logo-subtitle mt-1">
+                          Il mensile di informazione della Marca
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </header>
 
-        <nav class="navbar navbar-expand-lg navbar-light mb-2">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" style="margin-left: auto;" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-
-                <li class="nav-item">
-                  <a class="nav-link special-menu-item" href="#">la rivista</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <!-- deve portare a tutte le news -->
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        notizie
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Attualità</a>
-                        <a class="dropdown-item" href="#">Politica</a>
-                        <a class="dropdown-item" href="#">Economia</a>
-                        <a class="dropdown-item" href="#">Sport</a>
-                        <a class="dropdown-item" href="#">Cultura</a>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">archivio</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">contatti</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">la redazione</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <!-- deve portare a tutte le news -->
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        more
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">area riservata</a>
-                    </div>
-                </li>
-
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav align-center nav-main">
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Rivista</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Cultura</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Economia</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Enogastronomia</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Musica</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Sport</a>
+                  </li>
               </ul>
-            </div>
-        </nav>
+          </div>
+      </nav>
 
-        <main>
+  </div>
+
+  <main role="main" class="container">
 
             <div class="row mt-3">
 
@@ -109,7 +89,7 @@
                         <!-- CATEGORIA + DATA -->
                         <div class="post-meta">
                             <div class="post-data">
-                                <p>Gennaio 1, 2014 di <a href="#">Mark</a></p>
+                                <p>Gennaio 1, 2014 di Giampaolo Zorzo</p>
                             </div>
                         </div>
                         <!-- CORPO del POST -->
@@ -153,31 +133,25 @@
                             </div>
                         </div>
                         <!-- RELATED POSTS -->
-                        <div class="card-deck">
-                          <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="related-posts">
+                            <h5 class="post-lateralbanner-postrecenti">POTREBBE INTERESSARTI</h5>
+                            <div class="row mt-4">
+                                <div class="col-md-4">
+                                    <img class="w-100" src="images/example-img.jpg" alt="Card image cap">
+                                    <h6 class="mt-2">In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                    <p class="recent-card-text">Gennaio 1, 2014</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="w-100" src="images/example-img.jpg" alt="Card image cap">
+                                    <h6 class="mt-2">In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                    <p class="recent-card-text">Gennaio 1, 2014</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="w-100" src="images/example-img.jpg" alt="Card image cap">
+                                    <h6 class="mt-2">In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                    <p class="recent-card-text">Gennaio 1, 2014</p>
+                                </div>
                             </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                          </div>
                         </div>
                     </div>
                 </div>
@@ -186,6 +160,40 @@
                 <div class="col-md-4">
                     <div class="sticky-top pt-5">
                         <h5 class="post-lateralbanner-postrecenti">POST RECENTI</h5>
+                        <div class="recent-card img-container">
+                            <img class="post-img" src="images/example-img.jpg" alt="">
+                            <div class="bottom-center align-center">
+                                <h6>In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                <p class="recent-card-text">Gennaio 1, 2014</p>
+                            </div>
+                        </div>
+                        <div class="recent-card splitscreen" href="">
+                            <div class="left-1">
+                                <img class="recent-card-side-image" src="images/example-img.jpg" alt="Card image cap">
+                            </div>
+                            <div class="right-2 recent-card-side-text">
+                                <h6>In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                <p class="recent-card-text">Gennaio 1, 2014</p>
+                            </div>
+                        </div>
+                        <div class="recent-card splitscreen">
+                            <div class="left-1">
+                                <img class="recent-card-side-image" src="images/example-img.jpg" alt="Card image cap">
+                            </div>
+                            <div class="right-2 recent-card-side-text">
+                                <h6>In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                <p class="recent-card-text">Gennaio 1, 2014</p>
+                            </div>
+                        </div>
+                        <div class="recent-card splitscreen">
+                            <div class="left-1">
+                                <img class="recent-card-side-image" src="images/example-img.jpg" alt="Card image cap">
+                            </div>
+                            <div class="right-2 recent-card-side-text">
+                                <h6>In falesia e in montagna, diversi tipi di arrampicata</h6>
+                                <p class="recent-card-text">Gennaio 1, 2014</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -207,10 +215,10 @@
                     <div class="navbar navbar-expand-lg navbar-light">
                         <ul class="navbar-nav align-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">privacy(?)</a>
+                                <a class="nav-link" href="#">privacy</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">terms(?)</a>
+                                <a class="nav-link" href="#">terms</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">chi siamo</a>
