@@ -1,0 +1,241 @@
+/** GENERAL STYLING **/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+body, p, textarea {
+    font-family: "Open Sans",sans-serif;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+} @media (min-width: 768px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+}
+
+.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** COLORI **/
+
+
+/** SERVIZIO **/
+.txt-cultura {
+    color: rgba(0,0,0,.5) !important;
+}
+
+.txt-economia {
+    color: violet !important;
+}
+
+.txt-enogastronomia {
+    color: green !important;
+}
+
+.txt-musica {
+    color: blue !important;
+}
+
+.txt-sport {
+    color: orange !important;
+}
+
+/** HEADER **/
+
+.blog-logo {
+    height: 7rem;
+}
+
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.75rem;
+} .blog-header-logo:hover {
+    text-decoration: none;
+}
+
+.blog-header-logo-subtitle {
+    font-size: 1rem;
+}
+
+/** NAVBAR **/
+
+.nav-item {
+    margin-left: 1rem;
+    margin-right: 1.25rem;
+    font-weight: 400;
+} @media (max-width: 992px) {
+    .nav-main {
+        text-align: right;
+    }
+}
+
+/** BANNER RIVISTA **/
+.banner-rivista {
+    background-image: linear-gradient(to right, rgba(100,100,100,.9), rgba(100,100,100,.3)), url("../images/background.jpg"); /* W3C */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.banner-text {
+    font-weight: 600 !important;
+    text-transform: uppercase;
+}
+
+/** SPONSORS **/
+.sponsor-list > a > img {
+    padding: 1rem;
+    width: 100%;
+}
+
+/** POST **/
+.blog-post {
+    margin-bottom: 4rem;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+
+.post-titolo {
+    margin-bottom: .25rem;
+    font-size: 2rem;
+}
+
+.post-categoria {
+    background-color: #fecb00;
+    font-weight: bold;
+    color: black;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+.post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+}
+
+.post-data {
+
+}
+
+.post-corpo {
+    line-height: 1.75;
+}
+
+.post-condivisione {
+    font-size: 0.80rem;
+    text-transform: uppercase;
+    color: rgba(0,0,0,1);
+}
+
+.post-prevsucc {
+    border-top: 1px solid #e5e5e5;
+    color: rgba(0,0,0,.5);
+}
+
+.post-lateralbanner-postrecenti {
+    font-family: sans-serif !important;
+}
+
+/** FOOTER **/
+.footer-blog {
+    color: #999;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-social {
+    padding: 0;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2.25rem;
+} .footer-social > li {
+    display: inline-block;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+} .footer-social > li > a {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.5);
+} .footer-social > li > a :hover {
+    color: rgba(0,0,0,.7);
+}
+
+.footer-navbar {
+    text-transform: uppercase;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+}
+
+.footer-legal {
+    font-size: 0.80rem;
+}
+
+/***************/
+.card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+  /*
+   * Blog name and description
+   */
+  .blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .blog-description {
+    font-size: 1.1rem;
+    color: #999;
+  }
+
+  @media (min-width: 40em) {
+    .blog-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
