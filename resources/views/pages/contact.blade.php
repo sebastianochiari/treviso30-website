@@ -89,7 +89,7 @@
             <p>
                 Alberto Geromel
                 <br>
-                albero.trevisonews@gmail.com
+                alberto.trevisonews@gmail.com
                 <br>
                 +39 370 7041373
             </p>
@@ -98,10 +98,10 @@
     </main>
 
     <footer class="mt-5 pb-5" id="footer">
-        <div class="container footer-blog">
-            <div id="footer-social" class="mt-5">
-                <p class="align-center">Seguici su:</p>
-                <ul class="footer-social mt-4">
+        <div class="container">
+            <div id="footer-social" class="footer-blog">
+                <p class="pt-4 align-center">Seguici su:</p>
+                <ul class="footer-social mt-3">
                     <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>

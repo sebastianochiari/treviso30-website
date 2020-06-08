@@ -6,6 +6,11 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p, textarea {
     font-family: "Open Sans",sans-serif;
+    line-height: 1.75;
+}
+
+main {
+    margin-top: 1.5rem;
 }
 
 .display-4 {
@@ -169,7 +174,7 @@ body, p, textarea {
 .footer-social {
     padding: 0;
     border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 2.25rem;
+    padding-bottom: 2rem;
 } .footer-social > li {
     display: inline-block;
     margin-left: 1.5rem;
@@ -189,6 +194,26 @@ body, p, textarea {
 
 .footer-legal {
     font-size: 0.80rem;
+}
+
+/** REDAZIONE **/
+.redazione-card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+} .redazione-card > p, .redazione-card > div > p {
+    margin: 0;
+    font-size: 0.9rem;
+} .redazione-card > h5, .redazione-card > div > h5 {
+    margin: 0;
+}
+
+.redazione-posizione {
+    font-style: italic;
+}
+
+.redazione-multipli {
+    margin-bottom: 0.5rem;
 }
 
 /***************/
