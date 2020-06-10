@@ -2,6 +2,13 @@
 
 @section('title', '- Chi siamo')
 
+@section('stylesheets')
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
+
+@endsection
+
 @section('content')
 
         <div class="row">

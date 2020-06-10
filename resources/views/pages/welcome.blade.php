@@ -2,6 +2,13 @@
 
 @section('title', '- Informazione di Marca')
 
+@section('stylesheets')
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
+
+@endsection
+
 @section('content')
 
 <div class="jumbotron p-3 p-md-5 text-white rounded banner-rivista">

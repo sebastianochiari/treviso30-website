@@ -2,6 +2,13 @@
 
 @section('title', '- Contattaci')
 
+@section('stylesheets')
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
+
+@endsection
+
 @section('content')
 
         <h4>Contattaci</h4>
