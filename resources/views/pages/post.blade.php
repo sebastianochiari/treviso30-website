@@ -2,13 +2,6 @@
 
 @section('title', '- esempio di post')
 
-@section('stylesheets')
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
-
-@endsection
-
 @section('content')
             <div class="row mt-3">
 

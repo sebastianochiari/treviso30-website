@@ -204,6 +204,12 @@ main {
     flex: 2;
 }
 
+/** CARD **/
+.no-border {
+    border: 0;
+    border-radius: 0;
+}
+
 /** FOOTER **/
 .footer-blog {
     color: #999;

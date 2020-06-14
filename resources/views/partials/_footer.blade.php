@@ -24,7 +24,7 @@
                         <a class="nav-link" href="/contact">contatti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">area riservata</a>
+                        <a class="nav-link" href="/posts/create">area riservata</a>
                     </li>
                 </ul>
             </div>

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use App\Post;
+use Session;
 
 class PostController extends Controller
 {
@@ -50,6 +54,9 @@ class PostController extends Controller
 
         $post->save();
 
+        // flash > only let exists for one request
+        Session::flash('success', 'Il nuovo post è stato salvato correttamente!');
+
         // rederect to another page
         return redirect()->route('posts.show',$post->id);
     }
@@ -62,7 +69,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('posts/show');
     }
 
     /**
