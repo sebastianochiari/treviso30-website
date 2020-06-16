@@ -1,38 +1,33 @@
-@extends('main')
-
-@section('title', '- Nuovo Post')
+@extends('dashboard')
 
 @section('stylesheets')
 
 {!! Html::style('css/parsley.css') !!}
+{!! Html::style('css/dashboard.css') !!}
 
 @endsection
 
 @section('content')
 
-<div class="row" id="createPost">
+<div class="mt-4">
 
-    <div class="col-md-8 offset-md-2">
+    <h4>
+        Crea un nuovo post
+    </h4>
 
-        <h4>
-            Crea un nuovo post
-        </h4>
+    <hr>
 
-        <hr>
+    {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
+    {{ Form::label('title', 'Titolo:') }}
+    <!-- null è il default value -->
+    {{ Form::text('title', null, array('class' => 'form-control mb-2', 'required' => '', 'maxlength' => '255')) }}
 
-        {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
-        {{ Form::label('title', 'Titolo:') }}
-        <!-- null è il default value -->
-        {{ Form::text('title', null, array('class' => 'form-control mb-2', 'required' => '', 'maxlength' => '255')) }}
+    {{ Form::label('body', 'Corpo:') }}
+    {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
 
-        {{ Form::label('body', 'Corpo:') }}
-        {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
+    {{ Form::submit('Create Post', array('class' => 'btn btn-success mt-2')) }}
 
-        {{ Form::submit('Create Post', array('class' => 'btn btn-success mt-2')) }}
-
-        {!! Form::close() !!}
-
-    </div>
+    {!! Form::close() !!}
 
 </div>
 
@@ -41,5 +36,6 @@
 @section('scripts')
 
 {!! Html::script('js/parsley.js') !!}
+{!! Html::script('js/dashboard.js') !!}
 
 @endsection

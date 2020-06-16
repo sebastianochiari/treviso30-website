@@ -5,9 +5,9 @@
         </h6>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link {{ Request::is('posts/create') ? "active" : "" }}" href="{{ route('posts.create') }}">
                     <span><i class="fas fa-file-upload mr-1"></i></span>
-                    Nuovo Post<span class="sr-only">(current)</span>
+                    Nuovo post<span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -23,7 +23,7 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{ Request::is('posts') ? "active" : "" }}" href="{{ route('posts.index') }}">
                     <span><i class="fas fa-clipboard-list mr-1"></i></span>
                     Gestisci post
                 </a>

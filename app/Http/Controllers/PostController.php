@@ -18,7 +18,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        // create a variable to store all the blog posts in it from the database
+        $posts = Post::orderBy('id','desc')->paginate(10);
+
+        // display a view and pass the variable
+        return view('posts.index')->with('posts', $posts);
     }
 
     /**
@@ -28,7 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('posts/create');
+        return view('posts.create');
     }
 
     /**
@@ -69,7 +73,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return view('posts/show');
+        $post = Post::find($id);
+        return view('posts.show')->with('post', $post);
     }
 
     /**
@@ -80,7 +85,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('posts.edit')->with('post', $post);
     }
 
     /**
@@ -92,7 +98,26 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // validate the data
+        $this->validate($request, array(
+            // rules that we want to validate
+            'title' => 'required|max:255',
+            'body' => 'required'
+        ));
+
+        // store the data in the database
+        $post = Post::find($id);
+
+        $post->title = $request->title;
+        $post->body = $request->body;
+
+        $post->save();
+
+        // flash > only let exists for one request
+        Session::flash('success', 'Il post è stato modificato correttamente!');
+
+        // rederect to another page
+        return redirect()->route('posts.show',$post->id);
     }
 
     /**
@@ -103,6 +128,12 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+
+        $post->delete();
+
+        Session::flash('success', 'Il post è stato correttamente eliminato!');
+
+        return redirect()->route('posts.index');
     }
 }

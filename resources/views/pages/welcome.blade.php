@@ -1,5 +1,12 @@
 @extends('main')
 
+@section('stylesheets')
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
+
+@endsection
+
 @section('title', '- Informazione di Marca')
 
 @section('content')
@@ -18,88 +25,23 @@
 </div>
 
 <div class="row mb-2">
-    <div class="col-md-6">
-        <div class="card no-border box-shadow">
-            <div class="card-img-top img-container mb-2">
-                <img src="images/example-img.jpg" alt="" class="post-img">
-                <div class="bottom-left post-categoria">SPORT</div>
-            </div>
-            <div class="card-body">
-                <h3 class="mb-0">
-                    <a class="text-dark" href="#">Featured post</a>
-                </h3>
-                <div class="mb-1 text-muted">Gennaio 1, 2014</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#">Continue reading</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card no-border box-shadow">
-            <div class="card-img-top img-container mb-2">
-                <img src="images/example-img.jpg" alt="" class="post-img">
-                <div class="bottom-left post-categoria">SPORT</div>
-            </div>
-            <div class="card-body">
-                <h3 class="mb-0">
-                    <a class="text-dark" href="#">Featured post</a>
-                </h3>
-                <div class="mb-1 text-muted">Gennaio 1, 2014</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#">Continue reading</a>
+    @foreach ($posts as $post)
+        <div class="col-md-6 p-3">
+            <div class="card no-border box-shadow h-100">
+                <div class="card-img-top img-container mb-2">
+                    <img src="images/example-img.jpg" alt="" class="post-img">
+                    <div class="bottom-left post-categoria">SPORT</div>
+                </div>
+                <div class="card-body">
+                    <h3 class="mb-0">
+                        <a class="text-dark" href="#">{{ $post->title }}</a>
+                    </h3>
+                    <div class="mb-1 text-muted">{{ date('j M Y', strtotime($post->created_at)) }}</div>
+                    <p class="card-text mb-auto">{{ substr($post->body, 0, 150) }}{{ strlen($post->body) > 150 ? "..." : "" }}</p>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row mt-3">
-    <div class="col-md-4">
-        <div class="card no-border box-shadow">
-            <div class="card-img-top img-container mb-2">
-                <img src="images/example-img.jpg" alt="" class="post-img">
-                <div class="bottom-left post-categoria">SPORT</div>
-            </div>
-            <div class="card-body">
-                <h3 class="mb-0">
-                    <a class="text-dark" href="#">Featured post</a>
-                </h3>
-                <div class="mb-1 text-muted">Gennaio 1, 2014</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#">Continue reading</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card no-border box-shadow">
-            <div class="card-img-top img-container mb-2">
-                <img src="images/example-img.jpg" alt="" class="post-img">
-                <div class="bottom-left post-categoria">SPORT</div>
-            </div>
-            <div class="card-body">
-                <h3 class="mb-0">
-                    <a class="text-dark" href="#">Featured post</a>
-                </h3>
-                <div class="mb-1 text-muted">Gennaio 1, 2014</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#">Continue reading</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="card no-border box-shadow">
-            <div class="card-img-top img-container mb-2">
-                <img src="images/example-img.jpg" alt="" class="post-img">
-                <div class="bottom-left post-categoria">SPORT</div>
-            </div>
-            <div class="card-body">
-                <h3 class="mb-0">
-                    <a class="text-dark" href="#">Featured post</a>
-                </h3>
-                <div class="mb-1 text-muted">Gennaio 1, 2014</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#">Continue reading</a>
-            </div>
-        </div>
-    </div>
+    @endforeach
 </div>
 
 <div class="row mt-5">

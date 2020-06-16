@@ -1,5 +1,12 @@
 @extends('main')
 
+@section('stylesheets')
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{{ url('/css/style.css') }}">
+
+@endsection
+
 @section('title', '- esempio di post')
 
 @section('content')

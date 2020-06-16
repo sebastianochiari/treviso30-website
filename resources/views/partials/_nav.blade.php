@@ -33,6 +33,12 @@
                     <a class="nav-link" href="#">Enogastronomia</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Storia di Treviso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Benessere</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Musica</a>
                 </li>
                 <li class="nav-item">
