@@ -9,6 +9,12 @@
 
 <body>
 
+    @if(Auth::check())
+
+        @include('partials/_loginToolbar')
+
+    @endif
+
     @include('partials/_nav')
 
     <main role="main" class="container">

@@ -25,7 +25,7 @@
     {{ Form::label('body', 'Corpo:') }}
     {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
 
-    {{ Form::submit('Create Post', array('class' => 'btn btn-success mt-2')) }}
+    {{ Form::submit('Crea il post', array('class' => 'btn btn-success mt-2')) }}
 
     {!! Form::close() !!}
 
