@@ -11,11 +11,11 @@
 <div class="row align-items-center mt-4">
 
     <div class="col-md-10">
-        <h2 style="margin: 0">Tutti i post</h2>
+        <h4 style="margin: 0">Tutti i post</h4>
     </div>
 
-    <div class="col-md-2">
-        <a href="{{ route('posts.create') }}" class="btn btn-lg btn-block btn-primary">Crea un nuovo post</a>
+    <div class="col-md-2 p-2">
+        {!! $posts->links(); !!}
     </div>
 
 </div>
@@ -56,9 +56,6 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
-        <div class="float-right">
-            {!! $posts->links(); !!}
         </div>
     </div>
 </div>

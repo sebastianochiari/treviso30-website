@@ -13,14 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['web']], function() {
-    Route::get('news/{slug}', ['as' => 'news.single', 'uses' => 'NewsController@getSingle'])
-        ->where('slug', '[\w\d\-\_]+');
+Route::get('news/{slug}', ['as' => 'news.single', 'uses' => 'NewsController@getSingle'])->where('slug', '[\w\d\-\_]+');
 
-    Route::get('post', 'PagesController@getPost');
-    Route::get('contact', 'PagesController@getContact');
-    Route::get('about', 'PagesController@getAbout');
-    Route::get('/', 'PagesController@getIndex');
+Route::get('post', 'PagesController@getPost');
+Route::get('contact', 'PagesController@getContact');
+Route::get('about', 'PagesController@getAbout');
+Route::get('/', 'PagesController@getIndex');
 
-    Route::resource('posts', 'PostController');
-});
+Route::resource('posts', 'PostController');
+
+Auth::routes();

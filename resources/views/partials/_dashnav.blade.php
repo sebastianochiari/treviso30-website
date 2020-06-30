@@ -4,8 +4,13 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">Sign out</a>
+        <li class="nav-item text-nowrap p-2">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-light">
+                    {{ __('Logout') }}
+                </button>
+            </form>
         </li>
     </ul>
 </nav>
