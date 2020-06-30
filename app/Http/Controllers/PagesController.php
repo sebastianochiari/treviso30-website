@@ -13,8 +13,8 @@ class PagesController extends Controller {
     # pass that data to the correct view
 
     public function getIndex() {
-        $posts = Post::orderBy('id','desc')->limit(4)->get();
-        return view('pages/welcome')->with('posts', $posts);
+        $latestPosts = Post::orderBy('id','desc')->limit(4)->get();
+        return view('pages/welcome')->with('latestPosts', $latestPosts);
     }
 
     public function getAbout() {

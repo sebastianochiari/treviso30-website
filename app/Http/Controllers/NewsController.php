@@ -9,8 +9,8 @@ class NewsController extends Controller
 {
     public function getSingle($slug) {
         // fetch from the DB based on slug (first() -> stop at the first one instead of collection)
-        $post = Post::where('slug', '=', $slug)->first();
+        $mainPost = Post::where('slug', '=', $slug)->first();
         // return the view and pass in the post object
-        return view('news.single')->with('post', $post);
+        return view('news.single')->with('mainPost', $mainPost);
     }
 }

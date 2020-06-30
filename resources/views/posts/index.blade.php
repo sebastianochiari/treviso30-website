@@ -28,10 +28,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
+                        <th scope="col">Titolo</th>
                         <th scope="col">Body</th>
-                        <th scope="col">Created At</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Creato</th>
                         <th scope="col"></th>
                     </tr>
                 </thead>
@@ -39,10 +39,10 @@
 
                     @foreach($posts as $post)
                     <tr>
-                        <th>{{ $post->id }}</th>
                         <td>{{ $post->title }}</td>
-                        <td>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 50 ? "..." : "" }} </td>
-                        <td>{{ date('j M Y', strtotime($post->created_at)) }}</td>
+                        <td>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 100 ? "..." : "" }} </td>
+                        <td>{{ $post->category->name }}</td>
+                        <td>{{ date('j/m/Y', strtotime($post->created_at)) }}</td>
                         <td style="display: inline-flex">
                             <a href="{{ route('posts.show', $post->id) }}" class="btn btn-primary m-1" alt="view"><i class="far fa-eye"></i></a>
                             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-success m-1" alt="edit"><i class="fas fa-paragraph"></i></a>

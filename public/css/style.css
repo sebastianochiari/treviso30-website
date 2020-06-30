@@ -26,30 +26,6 @@ main {
     margin-right: auto;
 }
 
-/** COLORI **/
-
-
-/** SERVIZIO **/
-.txt-cultura {
-    color: rgba(0,0,0,.5) !important;
-}
-
-.txt-economia {
-    color: violet !important;
-}
-
-.txt-enogastronomia {
-    color: green !important;
-}
-
-.txt-musica {
-    color: blue !important;
-}
-
-.txt-sport {
-    color: orange !important;
-}
-
 /** HEADER **/
 
 .blog-logo {
@@ -135,10 +111,11 @@ main {
 }
 
 .post-categoria {
-    background-color: #fecb00;
+    background-color: #000000;
+    text-transform: uppercase;
     font-weight: bold;
-    color: black;
-    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    color: #f5f5f5;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
 }
 
 .post-meta {

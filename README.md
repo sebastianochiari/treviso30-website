@@ -2,12 +2,12 @@
 Website for an online newspaper
 
 ### Struttura
-- `index.html` landing page con banner promozionale rivista, ultimi articoli pubblicati e selezione di articoli raggruppati per tematica
-- `contatti.html` pagina con form per essere contattati
-- `redazione.html` pagina con tutta la redazione, immagine più breve descrizione
-- `"argomento".html` singole pagine in cui vengono mostrati tutti gli articoli in base all'argomento scelto
-- `archivio.html` archivio delle riviste dove è possibile scaricare i numeri precedenti
-- `numeroattuale.html` pagina dedicata alla rivista del mese, da scaricare
+- `index` landing page con banner promozionale rivista, ultimi articoli pubblicati e selezione di articoli raggruppati per tematica
+- `contatti` pagina con form per essere contattati
+- `redazione` pagina con tutta la redazione, immagine più breve descrizione
+- `argomento` singole pagine in cui vengono mostrati tutti gli articoli in base all'argomento scelto
+- `archivio` archivio delle riviste dove è possibile scaricare i numeri precedenti
+- `single` pagina dedicata al singolo post
 
 ### Database in MySQL [SQLite]
 - tabella per gli argomenti
@@ -23,4 +23,4 @@ Valutare se aggiungere una dashboard accessibile dopo login per la redazione da 
 - a lato, sponsor (BIBANESI, ASTORIA WINES, AUTOFFICINA LENZINI, PIZZERIA SANTA LUCIA, LAGUNA PALACE, DAPINO, BIANCO e CELESTE, RADIME, COMMAUTO, FALCON)
 - stile molto semplice
 - informarsi su Google AdWords
-- articoli di attualità categorizzati (CULTURA (grigio), ECONOMIA (viola), ENOGASTRONOMIA (verde), MUSICA (blu), STORIA di TREVISO (azzurro), BENESSERE, SPORT (arancione))
+- articoli di attualità categorizzati (CULTURA (grigio), ECONOMIA (viola), ENOGASTRONOMIA (verde), STORIA di TREVISO (azzurro), BENESSERE (blu), SPORT (arancione))

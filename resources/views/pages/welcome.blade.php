@@ -20,17 +20,13 @@
 </div>
 
 <!-- LATEST POSTS -->
-<div class="latest-posts">
-
-</div>
-
 <div class="row mb-2">
-    @foreach ($posts as $post)
+    @foreach ($latestPosts as $post)
         <div class="col-md-6 p-3">
             <div class="card no-border box-shadow h-100">
                 <div class="card-img-top img-container mb-2">
                     <img src="images/example-img.jpg" alt="" class="post-img">
-                    <div class="bottom-left post-categoria">SPORT</div>
+                    <div class="bottom-left box-shadow post-categoria" style="background-color: #{{ $post->category->color }} !important">{{ $post->category->name }}</div>
                 </div>
                 <div class="card-body">
                     <h3 class="mb-0">
@@ -44,6 +40,7 @@
     @endforeach
 </div>
 
+<!-- RECENT per CATEGORIA -->
 <div class="row mt-5">
     <div class="col-md-8 blog-main">
 

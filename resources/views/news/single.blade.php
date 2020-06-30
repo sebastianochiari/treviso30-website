@@ -7,7 +7,7 @@
 
 @endsection
 
-@section('title', "- $post->title")
+@section('title', "- $mainPost->title")
 
 @section('content')
             <div class="row mt-3">
@@ -18,21 +18,21 @@
                         <!-- IMMAGINE -->
                         <div class="img-container mb-2">
                             <img src="{{ url('/images/example-img.jpg') }}" alt="" class="post-img">
-                            <div class="bottom-left post-categoria">SPORT</div>
+                            <div class="bottom-left post-categoria" style="background-color: #{{ $mainPost->category->color }} !important">{{ $mainPost->category->name }}</div>
                         </div>
                         <!-- TITOLO -->
                         <h3 class="post-titolo mt-3 mb-3">
-                            {{ $post->title }}
+                            {{ $mainPost->title }}
                         </h3>
                         <!-- CATEGORIA + DATA -->
                         <div class="post-meta">
                             <div class="post-data">
-                                <p>{{ date('j F Y', strtotime($post->created_at)) }} di Giampaolo Zorzo</p>
+                                <p>{{ date('j F Y', strtotime($mainPost->created_at)) }} di Giampaolo Zorzo</p>
                             </div>
                         </div>
                         <!-- CORPO del POST -->
                         <div class="post-corpo mt-3 mb-3">
-                            {{ $post->body }}
+                            {{ $mainPost->body }}
                         </div>
                         <!-- BANNER CONDIVISIONE -->
                         <div class="post-condivisione mt-5 pt-4 pb-4">

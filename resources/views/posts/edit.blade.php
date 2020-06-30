@@ -26,6 +26,9 @@
             {{ Form::label('slug', 'Slug:') }}
             {{ Form::text('slug', null, array('class' => 'form-control mb-2', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
 
+            {{ Form::label('category_id', 'Categoria:') }}
+            {{ Form::select('category_id', $categories, null, ['class' => 'form-control mb-2']) }}
+
             {{ Form::label('body', 'Corpo:') }}
             {{ Form::textarea('body', null, ['class' => 'form-control mb-2']) }}
         </div>
