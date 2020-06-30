@@ -20,7 +20,6 @@ class PostController extends Controller
     {
         // create a variable to store all the blog posts in it from the database
         $posts = Post::orderBy('id','desc')->paginate(10);
-
         // display a view and pass the variable
         return view('posts.index')->with('posts', $posts);
     }
@@ -45,8 +44,9 @@ class PostController extends Controller
     {
         // validate the data
         $this->validate($request, array(
-            // rules that we want to validate
+            // rules that we want to validate (validate in order, bigger catches first)
             'title' => 'required|max:255',
+            'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
             'body' => 'required'
         ));
 
@@ -54,6 +54,7 @@ class PostController extends Controller
         $post = new Post;
 
         $post->title = $request->title;
+        $post->slug = $request->slug;
         $post->body = $request->body;
 
         $post->save();
@@ -99,16 +100,22 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         // validate the data
-        $this->validate($request, array(
-            // rules that we want to validate
-            'title' => 'required|max:255',
-            'body' => 'required'
-        ));
-
-        // store the data in the database
         $post = Post::find($id);
+        if($request->input('slug') == $post->slug) {
+            $this->validate($request, array(
+                'title' => 'required|max:255',
+                'body' => 'required'
+            ));
+        } else {
+            $this->validate($request, array(
+                'title' => 'required|max:255',
+                'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+                'body' => 'required'
+            ));
+        }
 
         $post->title = $request->title;
+        $post->slug = $request->slug;
         $post->body = $request->body;
 
         $post->save();

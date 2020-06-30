@@ -34,7 +34,7 @@
                 </div>
                 <div class="card-body">
                     <h3 class="mb-0">
-                        <a class="text-dark" href="#">{{ $post->title }}</a>
+                        <a class="text-dark" href="{{ route('news.single', $post->slug) }}">{{ $post->title }}</a>
                     </h3>
                     <div class="mb-1 text-muted">{{ date('j M Y', strtotime($post->created_at)) }}</div>
                     <p class="card-text mb-auto">{{ substr($post->body, 0, 150) }}{{ strlen($post->body) > 150 ? "..." : "" }}</p>

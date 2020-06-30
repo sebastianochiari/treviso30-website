@@ -23,6 +23,9 @@
             {{ Form::label('title', 'Titolo:') }}
             {{ Form::text('title', null, ['class' => 'form-control mb-2']) }}
 
+            {{ Form::label('slug', 'Slug:') }}
+            {{ Form::text('slug', null, array('class' => 'form-control mb-2', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
+
             {{ Form::label('body', 'Corpo:') }}
             {{ Form::textarea('body', null, ['class' => 'form-control mb-2']) }}
         </div>

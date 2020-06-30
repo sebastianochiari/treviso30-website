@@ -29,6 +29,7 @@
         <div class="col-md-4">
             <div class="card bg-light">
                 <div class="card-body">
+                    <p><b>URL:</b> <a href="{{ route('news.single', $post->slug) }}">{{ route('news.single', $post->slug) }}</a></p>
                     <p><b>Creato:</b> {{ date('j M Y H:i', strtotime($post->created_at)) }} </p>
                     <p><b>Ultimo aggiornamento:</b> {{ date('j M Y H:i', strtotime($post->updated_at)) }} </p>
                     <hr>

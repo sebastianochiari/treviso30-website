@@ -22,6 +22,9 @@
     <!-- null è il default value -->
     {{ Form::text('title', null, array('class' => 'form-control mb-2', 'required' => '', 'maxlength' => '255')) }}
 
+    {{ Form::label('slug', 'Slug:') }}
+    {{ Form::text('slug', null, array('class' => 'form-control mb-2', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
+
     {{ Form::label('body', 'Corpo:') }}
     {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
 
