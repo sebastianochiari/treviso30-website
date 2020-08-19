@@ -4,6 +4,17 @@
 
 {!! Html::style('css/dashboard.css') !!}
 
+<script src="https://cdn.tiny.cloud/1/9mds49kzhgjojhu80yfyuhh66zbho0u170z2qafw370he1ny/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'link lists',
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link | numlist bullist',
+        menubar: false
+    });
+</script>
+
 @endsection
 
 @section('content')

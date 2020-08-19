@@ -32,7 +32,7 @@
                         </div>
                         <!-- CORPO del POST -->
                         <div class="post-corpo mt-3 mb-3">
-                            {{ $mainPost->body }}
+                            {!! $mainPost->body !!}
                         </div>
                         <!-- BANNER CONDIVISIONE -->
                         <div class="post-condivisione mt-5 pt-4 pb-4">

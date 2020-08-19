@@ -33,7 +33,7 @@
                         <a class="text-dark" href="{{ route('news.single', $post->slug) }}">{{ $post->title }}</a>
                     </h3>
                     <div class="mb-1 text-muted">{{ date('j M Y', strtotime($post->created_at)) }}</div>
-                    <p class="card-text mb-auto">{{ substr($post->body, 0, 150) }}{{ strlen($post->body) > 150 ? "..." : "" }}</p>
+                    <p class="card-text mb-auto">{{ substr(strip_tags($post->body), 0, 150) }}{{ strlen(strip_tags($post->body)) > 150 ? "..." : "" }}</p>
                 </div>
             </div>
         </div>

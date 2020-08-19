@@ -40,7 +40,7 @@
                     @foreach($posts as $post)
                     <tr>
                         <td>{{ $post->title }}</td>
-                        <td>{{ substr($post->body, 0, 100) }}{{ strlen($post->body) > 100 ? "..." : "" }} </td>
+                        <td>{{ substr(strip_tags($post->body), 0, 100) }}{{ strlen(strip_tags($post->body)) > 100 ? "..." : "" }} </td>
                         <td>{{ $post->category->name }}</td>
                         <td>{{ date('j/m/Y', strtotime($post->created_at)) }}</td>
                         <td style="display: inline-flex">

@@ -22,7 +22,8 @@
 
             <h3>{{ $post->title }}</h3>
 
-            <p class="lead">{{ $post->body }}</p>
+            <!-- we are executing directly from the DB --> 
+            <p class="lead">{!! $post->body !!}</p>
 
         </div>
 
