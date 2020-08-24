@@ -15,11 +15,17 @@
     <!-- AREA CHE CONTIENE IL POST -->
     <div class="col-md-8">
         <div class="blog-post m-2">
-            <!-- IMMAGINE -->
-            <div class="img-container mb-2">
-                <img src="{{ url('/images/example-img.jpg') }}" alt="" class="post-img">
-                <div class="bottom-left post-categoria" style="background-color: #{{ $mainPost->category->color }} !important">{{ $mainPost->category->name }}</div>
-            </div>
+            @if(!empty($mainPost->image))
+                <!-- IMMAGINE -->
+                <div class="img-container mb-2">
+                    <img src="{{ asset('images/' . $mainPost->image) }}" class="post-img">
+                    <div class="bottom-left post-categoria" style="background-color: #{{ $mainPost->category->color }} !important">{{ $mainPost->category->name }}</div>
+                </div>
+            @else
+                <div class="row">
+                    <div class="col-md-4 offset-md-8 box-shadow post-categoria text-align-center" style="background-color: #{{ $mainPost->category->color }}">{{ $mainPost->category->name }}</div>
+                </div>
+            @endif
             <!-- TITOLO -->
             <h3 class="post-titolo mt-3 mb-3">
                 {{ $mainPost->title }}
@@ -30,6 +36,7 @@
                     <p>{{ date('j F Y', strtotime($mainPost->created_at)) }} di Giampaolo Zorzo</p>
                 </div>
             </div>
+
             <!-- CORPO del POST -->
             <div class="post-corpo mt-3 mb-3">
                 {!! $mainPost->body !!}

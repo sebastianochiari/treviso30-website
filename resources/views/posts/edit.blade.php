@@ -27,21 +27,25 @@
 
     <hr>
 
-    {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'put']) !!}
+    {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'put', 'files' => true]) !!}
 
     <div class="row mt-4">
         <div class="col-md-8">
             {{ Form::label('title', 'Titolo:') }}
-            {{ Form::text('title', null, ['class' => 'form-control mb-2']) }}
+            {{ Form::text('title', null, ['class' => 'form-control mb-4']) }}
 
             {{ Form::label('slug', 'Slug:') }}
-            {{ Form::text('slug', null, array('class' => 'form-control mb-2', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
+            {{ Form::text('slug', null, array('class' => 'form-control mb-4', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
 
             {{ Form::label('category_id', 'Categoria:') }}
-            {{ Form::select('category_id', $categories, null, ['class' => 'form-control mb-2']) }}
+            {{ Form::select('category_id', $categories, null, ['class' => 'form-control mb-4']) }}
+
+            {{ Form::label('featured_image', "Carica l'immagine:") }}
+            {{ Form::file('featured_image', array('class' => 'form-control-file')) }}
+            <small id="featured_image" class="form-text text-muted mb-4">È sempre consigliabile caricare un'immagine insieme al post.</small>
 
             {{ Form::label('body', 'Corpo:') }}
-            {{ Form::textarea('body', null, ['class' => 'form-control mb-2']) }}
+            {{ Form::textarea('body', null, ['class' => 'form-control']) }}
         </div>
 
         <div class="col-md-4">

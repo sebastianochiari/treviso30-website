@@ -32,7 +32,7 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('posts.index') }}">
+                <a class="nav-link {{ Request::is('posts') ? "active" : "" }}" href="{{ route('posts.index') }}">
                     <span><i class="fas fa-clipboard-list mr-2"></i></span>
                     Gestisci post
                 </a>

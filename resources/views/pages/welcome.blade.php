@@ -24,10 +24,16 @@
     @foreach ($latestPosts as $post)
         <div class="col-md-6 p-3">
             <div class="card no-border box-shadow h-100">
-                <div class="card-img-top img-container mb-2">
-                    <img src="images/example-img.jpg" alt="" class="post-img">
-                    <div class="bottom-left box-shadow post-categoria" style="background-color: #{{ $post->category->color }} !important">{{ $post->category->name }}</div>
-                </div>
+                @if(!empty($post->image))
+                    <div class="card-img-top img-container mb-2">
+                        <img src="{{ asset('images/' . $post->image) }}" alt="" class="post-img">
+                        <div class="bottom-left box-shadow post-categoria" style="background-color: #{{ $post->category->color }} !important">{{ $post->category->name }}</div>
+                    </div>
+                @else
+                    <div class="flex-div align-right">
+                        <div class="box-shadow post-categoria text-align-center m-3" style="width: 30%; background-color: #{{ $post->category->color }} !important">{{ $post->category->name }}</div>
+                    </div>
+                @endif
                 <div class="card-body">
                     <h3 class="mb-0">
                         <a class="text-dark" href="{{ route('news.single', $post->slug) }}">{{ $post->title }}</a>

@@ -32,25 +32,29 @@
     <div class="row">
         <div class="col-md-8">
 
-            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '')) !!}
-            {{ Form::label('title', 'Titolo:') }}
-            <!-- null è il default value -->
-            {{ Form::text('title', null, array('class' => 'form-control mb-2', 'required' => '', 'maxlength' => '255')) }}
+            {!! Form::open(array('route' => 'posts.store', 'data-parsley-validate' => '', 'files' => true)) !!}
+                {{ Form::label('title', 'Titolo:') }}
+                <!-- null è il default value -->
+                {{ Form::text('title', null, array('class' => 'form-control mb-4', 'required' => '', 'maxlength' => '255')) }}
 
-            {{ Form::label('slug', 'Slug:') }}
-            {{ Form::text('slug', null, array('class' => 'form-control mb-2', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
+                {{ Form::label('slug', 'Slug:') }}
+                {{ Form::text('slug', null, array('class' => 'form-control mb-4', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
 
-            {{ Form::label('category_id', 'Categoria:')}}
-            <select class="form-control mb-2" name="category_id">
-                @foreach($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
+                {{ Form::label('category_id', 'Categoria:')}}
+                <select class="form-control mb-4" name="category_id">
+                    @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
+                </select>
 
-            {{ Form::label('body', 'Corpo:') }}
-            {{ Form::textarea('body', null, array('class' => 'form-control')) }}
+                {{ Form::label('featured_image', "Carica l'immagine:") }}
+                {{ Form::file('featured_image', array('class' => 'form-control-file')) }}
+                <small id="featured_image" class="form-text text-muted mb-4">È sempre consigliabile caricare un'immagine insieme al post.</small>
 
-            {{ Form::submit('Crea il post', array('class' => 'btn btn-success mt-2')) }}
+                {{ Form::label('body', 'Corpo:') }}
+                {{ Form::textarea('body', null, array('class' => 'form-control mb-4')) }}
+
+                {{ Form::submit('Crea il post', array('class' => 'btn btn-success mt-4')) }}
 
             {!! Form::close() !!}
 
