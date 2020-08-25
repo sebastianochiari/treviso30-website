@@ -1,12 +1,17 @@
 /** GENERAL STYLING **/
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-body, p, textarea {
-    font-family: "Open Sans",sans-serif;
+p, textarea {
+    font-family: 'Merriweather', serif;
     line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
 }
 
 main {
@@ -22,8 +27,8 @@ main {
 }
 
 .align-center {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .align-right {
@@ -36,6 +41,68 @@ main {
 
 .flex-div {
     display: flex;
+}
+
+.section-title, .recent-section-title {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 12px;
+    border-top: 1px solid #c8c8c8;
+    text-align: center;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: none !important;
+} .section-title span, .recent-section-title a span {
+    display: inline-block;
+    background: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 2px 28px 1px 28px;
+    letter-spacing: 1px;
+    vertical-align: middle;
+    color: #000;
+    position: relative;
+    top: -12px;
+    border-left: 18px solid #fff;
+    border-right: 18px solid #fff;
+}
+
+.recent-section-title {
+    text-align: left;
+} .recent-section-title a span {
+    color: #fff;
+}
+
+.recent-category-img {
+    width: 100%;
+    padding: 0rem 1rem 1rem 1rem;
+}
+
+#footer-social p {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: 2px;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.rivista-link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+} .rivista-link:hover {
+    color: #000000 !important;
+    background-color: #fcffa2;
+    text-decoration: none;
+}
+
+.article-abstract {
+    font-size: .9rem;
+    color: #888;
 }
 
 /** HEADER **/
@@ -63,9 +130,13 @@ main {
 /** NAVBAR **/
 
 .nav-item {
-    margin-left: 1rem;
-    margin-right: 1.25rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
     font-weight: 400;
+    font-size: .9rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
 } @media (max-width: 992px) {
     .nav-main {
         text-align: right;
@@ -83,6 +154,30 @@ main {
 .banner-text {
     font-weight: 600 !important;
     text-transform: uppercase;
+}
+
+.banner-img {
+    width: 90%;
+    height: 70%;
+    object-fit: cover;
+    object-position: 100% 0;
+}
+
+.meta {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .75rem;
+    font-weight: 400 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #888;
+    line-height: 1.1;
+}
+
+.meta a {
+    color: #f5f5f5;
+} .meta a:hover {
+    text-decoration: none;
 }
 
 /** SPONSORS **/
@@ -143,6 +238,9 @@ main {
     line-height: 1.75;
 }
 
+.post-corpo {
+}
+
 .post-condivisione {
     font-size: 0.80rem;
     text-transform: uppercase;
@@ -155,7 +253,7 @@ main {
 }
 
 .post-lateralbanner-postrecenti {
-    font-family: sans-serif !important;
+    font-family: "Open Sans",sans-serif !important;
     font-weight: bolder;
 }
 

@@ -81,9 +81,11 @@ class PostController extends Controller
             $image = $request->file('featured_image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/' . $filename);
-            Image::make($image)->resize(1280, 720, function($c) {
-                $c->aspectRatio();
-            })->save($location);
+
+            $img = Image::make($image);
+            $img->fit(1200, 800);
+            $img->save($location);
+
             $post->image = $filename;
         }
 
@@ -154,9 +156,11 @@ class PostController extends Controller
             $image = $request->file('featured_image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $location = public_path('images/' . $filename);
-            Image::make($image)->resize(1280, 720, function($c) {
-                $c->aspectRatio();
-            })->save($location);
+
+            $img = Image::make($image);
+            $img->fit(1200, 800);
+            $img->save($location);
+
             $oldFileName = $post->image;
             // update the DB
             $post->image = $filename;

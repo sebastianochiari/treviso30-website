@@ -3,8 +3,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
 
 <!-- FontAwesome -->
 <script src="https://kit.fontawesome.com/782fba089f.js" crossorigin="anonymous"></script>
