@@ -24,25 +24,25 @@
                     <a class="nav-link" href="#">Rivista</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cultura</a>
+                    <a class="nav-link" href="{{ route('news.category', '1') }}">Cultura</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Economia</a>
+                    <a class="nav-link" href="{{ route('news.category', '2') }}">Economia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Enogastronomia</a>
+                    <a class="nav-link" href="{{ route('news.category', '3') }}">Enogastronomia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Storia di Treviso</a>
+                    <a class="nav-link" href="{{ route('news.category', '4') }}">Musica</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Benessere</a>
+                    <a class="nav-link" href="{{ route('news.category', '5') }}">Storia di Treviso</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Musica</a>
+                    <a class="nav-link" href="{{ route('news.category', '6') }}">Benessere</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sport</a>
+                    <a class="nav-link" href="{{ route('news.category', '7') }}">Sport</a>
                 </li>
             </ul>
         </div>

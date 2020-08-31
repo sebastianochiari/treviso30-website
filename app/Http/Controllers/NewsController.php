@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 
 class NewsController extends Controller
 {
@@ -28,5 +29,16 @@ class NewsController extends Controller
 
         // return the view and pass in the post object
         return view('news.single')->with('mainPost', $mainPost)->with('recentPosts', $recentPosts)->with('correlatedPosts', $correlatedPosts)->with('nextPost', $nextPost)->with('prevPost', $prevPost);
+    }
+
+    public function getCollection($category_id) {
+        // extract the category we are talking about
+        $category = Category::where('id', '=', $category_id)->first();
+
+        // retrieve all the posts from the given category with pagination
+        $categoryPosts = Post::orderBy('id','desc')->where('category_id', '=', $category_id)->paginate(12);
+
+        // return the view and pass in the objects
+        return view('news.category')->with('category', $category)->with('categoryPosts', $categoryPosts);
     }
 }
