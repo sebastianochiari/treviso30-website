@@ -22,6 +22,8 @@ Route::get('about', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 
 Route::resource('posts', 'PostController');
-Route::resource('categories', 'CategoryController', ['except' => ['create']]);
+Route::resource('riviste', 'RivistaController')->only([
+    'index', 'create', 'store', 'destroy'
+]);
 
 Auth::routes();
