@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('news/{id}', ['as' => 'news.category', 'uses' => 'NewsController@getCollection'])->where('id', '^[0-9]*$');
 Route::get('news/{slug}', ['as' => 'news.single', 'uses' => 'NewsController@getSingle'])->where('slug', '[\w\d\-\_]+');
 
-Route::get('post', 'PagesController@getPost');
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
+Route::get('rivista', 'PagesController@getMagazine');
 Route::get('/', 'PagesController@getIndex');
 
 Route::resource('posts', 'PostController');

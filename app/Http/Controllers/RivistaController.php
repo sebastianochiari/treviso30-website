@@ -70,7 +70,7 @@ class RivistaController extends Controller
         // store image in the public folder
         $image = $request->file('preview_img');
         $filename = $timestamp . '.' . $image->getClientOriginalExtension();
-        $location = public_path('magazine\img/' . $filename);
+        $location = public_path('magazine/img/' . $filename);
         $img = Image::make($image);
         $img->save($location);
         $rivista->preview_img = $filename;
@@ -79,7 +79,7 @@ class RivistaController extends Controller
         $extension = $request->file('pdf_file')->extension();
         $filename = $timestamp . '.' . $extension;
         $path = $request->file('pdf_file')->storeAs(
-            'magazine\pdf',
+            'magazine/pdf',
             $filename,
             'public'
         );

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Category;
+use App\Rivista;
 
 class PagesController extends Controller {
 
@@ -25,8 +26,18 @@ class PagesController extends Controller {
             $temp = Post::orderBy('id', 'desc')->where('category_id', '=', "$i")->limit(3)->get();
             $recentPosts = $recentPosts->concat($temp);
         }
+        // rivista
+        $latestRivista = Rivista::orderBy('date','desc')->first();
 
-        return view('pages/welcome')->with('latestPosts', $latestPosts)->with('categories', $categories)->with('recentPosts', $recentPosts);
+        return view('pages/welcome')->with('latestPosts', $latestPosts)->with('categories', $categories)->with('recentPosts', $recentPosts)->with('latestRivista', $latestRivista);
+    }
+
+
+    public function getMagazine() {
+        // ottieni tutte le riviste con paginazione
+        $riviste = Rivista::orderBy('date', 'desc')->paginate(12);
+
+        return view('pages/rivista')->with('riviste', $riviste);
     }
 
     public function getAbout() {
@@ -35,10 +46,6 @@ class PagesController extends Controller {
 
     public function getContact() {
         return view('pages/contact');
-    }
-
-    public function getPost() {
-        return view('pages/post');
     }
 
 }
