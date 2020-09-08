@@ -33,7 +33,7 @@
                 <!-- CATEGORIA + DATA -->
                 <div class="post-meta">
                     <div class="post-data">
-                        <p>{{ date('j F Y', strtotime($mainPost->created_at)) }} di Giampaolo Zorzo</p>
+                        <p class="meta">{{ date('j F Y', strtotime($mainPost->created_at)) }} | <b>{{ $mainPost->author }}</b></p>
                     </div>
                 </div>
 

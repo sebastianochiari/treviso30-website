@@ -20,18 +20,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span><i class="far fa-clipboard mr-2"></i></span>
-                    I miei post
-                </a>
-            </li>
-        </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>area amministrativa</span>
-        </h6>
-        <ul class="nav flex-column mb-2">
-            <li class="nav-item">
                 <a class="nav-link {{ Request::is('posts') ? "active" : "" }}" href="{{ route('posts.index') }}">
                     <span><i class="fas fa-clipboard-list mr-2"></i></span>
                     Gestisci post
@@ -49,6 +37,12 @@
                     Gestisci riviste
                 </a>
             </li>
+        </ul>
+
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>area amministrativa</span>
+        </h6>
+        <ul class="nav flex-column mb-2">
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span><i class="fas fa-user mr-2"></i></span>

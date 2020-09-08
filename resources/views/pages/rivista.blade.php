@@ -12,7 +12,7 @@
 @section('content')
 
 <!-- NOME CATEGORIA -->
-<h2 class="text-align-center my-5">Riviste</h2>
+<h1 class="text-align-center my-5">Riviste</h1>
 
 <hr>
 
@@ -30,5 +30,12 @@
     @endforeach
     {!! $riviste->links(); !!}
 </div>
+
+<p class="meta mt-3 text-align-center">
+    torna a
+    <a href="/">
+        <b>HOME</b>
+    </a>
+</p>
 
 @endsection

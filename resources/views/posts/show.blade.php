@@ -38,6 +38,7 @@
                     @endif
                     <p class="mt-3"><b>URL:</b> <a href="{{ route('news.single', $post->slug) }}">{{ route('news.single', $post->slug) }}</a></p>
                     <p><b>Categoria:</b> {{ $post->category->name }} </p>
+                    <p><b>Autore:</b> {{ $post->author }} </p>
                     <p><b>Creato:</b> {{ date('j M Y H:i', strtotime($post->created_at)) }} </p>
                     <p><b>Ultimo aggiornamento:</b> {{ date('j M Y H:i', strtotime($post->updated_at)) }} </p>
                     <hr>

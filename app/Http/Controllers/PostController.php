@@ -47,7 +47,8 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('posts.create')->with('categories', $categories);
+        $user = auth()->user();
+        return view('posts.create')->with('categories', $categories)->with('user', $user);
     }
 
     /**
@@ -63,6 +64,7 @@ class PostController extends Controller
             // rules that we want to validate (validate in order, bigger catches first)
             'title' => 'required|max:255',
             'slug' => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            'author' => 'required|max:255',
             'category_id' => 'required|integer',
             'body' => 'required',
             'featured_image' => 'sometimes|image'
@@ -73,6 +75,7 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->slug = $request->slug;
+        $post->author = $request->author;
         $post->category_id = $request->category_id;
         $post->body = Purifier::clean($request->body);
 
@@ -141,6 +144,7 @@ class PostController extends Controller
         $this->validate($request, array(
             'title' => 'required|max:255',
             'slug' => "required|alpha_dash|min:5|max:255|unique:posts,slug,$id",
+            'author' => 'required|max:255',
             'category_id' => 'required|integer',
             'body' => 'required',
             'featured_image' => 'sometimes|image'
@@ -148,6 +152,7 @@ class PostController extends Controller
 
         $post->title = $request->title;
         $post->slug = $request->slug;
+        $post->author = $request->author;
         $post->category_id = $request->category_id;
         $post->body = Purifier::clean($request->body);
 

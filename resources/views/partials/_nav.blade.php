@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav align-center nav-main">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Rivista</a>
+                    <a class="nav-link" href="/rivista">Rivista</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('news.category', '1') }}">Cultura</a>

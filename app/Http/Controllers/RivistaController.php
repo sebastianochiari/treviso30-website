@@ -8,6 +8,7 @@ use App\Rivista;
 use Storage;
 use Session;
 use Image;
+use File;
 
 class RivistaController extends Controller
 {
@@ -103,6 +104,18 @@ class RivistaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rivista = Rivista::find($id);
+
+        $oldIMGName = $rivista->preview_img;
+        $oldPDFName = $rivista->pdf_file;
+
+        File::delete(public_path('magazine/img/' . $oldIMGName));
+        File::delete(public_path('magazine/pdf/' . $oldPDFName));
+
+        $rivista->delete();
+
+        Session::flash('success', 'La rivista è stata correttamente eliminata!');
+
+        return redirect()->route('riviste.index');
     }
 }
