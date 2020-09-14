@@ -66,7 +66,7 @@
                         @endif
                 </div>
                 <hr>
-                <div class="mt-2" id="creative-commons">
+                <div class="mt-5" id="creative-commons">
                     <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
                         <img alt="Licenza Creative Commons" lazy-img="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" src="https://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png" class="loaded" width="88" height="31">
                     </a>

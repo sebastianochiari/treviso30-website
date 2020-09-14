@@ -16,9 +16,10 @@
 
 <hr>
 
-<div class="row mt-3">
-    <!-- GRIGLIA CON GLI ULTIMI 12 POST RECENTI della seguente categoria -->
-    @foreach ($categoryPosts as $post)
+@if(!$categoryPosts->isEmpty())
+    <div class="row mt-3">
+        <!-- GRIGLIA CON GLI ULTIMI 12 POST RECENTI della seguente categoria -->
+        @foreach ($categoryPosts as $post)
         <div class="col-md-4 p-2">
             <a href="{{ route('news.single', $post->slug) }}">
                 <img src="{{ asset('images/' . $post->image) }}" class="category-img">
@@ -33,15 +34,21 @@
                 {{ substr(strip_tags($post->body), 0, 75) }}{{ strlen(strip_tags($post->body)) > 75 ? "..." : "" }}
             </p>
         </div>
-    @endforeach
-    {!! $categoryPosts->links(); !!}
-</div>
+        @endforeach
+        {!! $categoryPosts->links(); !!}
+    </div>
 
-<p class="meta mt-3 text-align-center">
-    torna a
-    <a href="/">
-        <b>HOME</b>
-    </a>
-</p>
+    @else
+    <p class="text-align-center my-5">
+        Non ci sono articoli da visualizzare.
+    </p>
+    @endif
 
-@endsection
+    <p class="meta mt-3 text-align-center">
+        torna a
+        <a href="/">
+            <b>HOME</b>
+        </a>
+    </p>
+
+    @endsection
