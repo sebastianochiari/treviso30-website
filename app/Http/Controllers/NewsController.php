@@ -15,20 +15,10 @@ class NewsController extends Controller
 
         // RECENT POSTS
         // fetch from the DB the 4 most recent posts (except the one that is showed)
-        $recentPosts = Post::orderBy('id','desc')->where('id', '!=', $mainPost->id)->limit(4)->get();
-
-        // CORRELATED POSTS
-        // fetch from the DB the 3 most recent posts from the same category(except the one that is showed)
-        $correlatedPosts = Post::orderBy('id','desc')->where('id', '!=', $mainPost->id)->where('category_id', '=', $mainPost->category_id)->limit(3)->get();
-
-        // NEXT POST
-        $nextPost = Post::orderBy('id','asc')->where('id', '>', $mainPost->id)->first();
-
-        // PREC POST
-        $prevPost = Post::orderBy('id','desc')->where('id', '<', $mainPost->id)->first();
+        $recentPosts = Post::orderBy('id','desc')->where('id', '!=', $mainPost->id)->limit(3)->get();
 
         // return the view and pass in the post object
-        return view('news.single')->with('mainPost', $mainPost)->with('recentPosts', $recentPosts)->with('correlatedPosts', $correlatedPosts)->with('nextPost', $nextPost)->with('prevPost', $prevPost);
+        return view('news.single')->with('mainPost', $mainPost)->with('recentPosts', $recentPosts);
     }
 
     public function getCollection($category_id) {

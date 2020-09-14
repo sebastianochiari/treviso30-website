@@ -90,6 +90,10 @@ main {
     color: #ffffff !important;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 .rivista-link {
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
@@ -403,3 +407,7 @@ main {
   .blog-pagination > .btn {
     border-radius: 2rem;
   }
+
+#creative-commons {
+    font-size: 10px;
+}
