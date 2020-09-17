@@ -56,6 +56,18 @@
                         Gestisci utenti
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('admin/sponsors/create') ? "active" : "" }}" href="{{ route('admin.sponsors.create') }}">
+                        <span><i class="fas fa-plus-circle mr-1"></i></span>
+                        Aggiungi sponsor
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('admin/sponsors') ? "active" : "" }}" href="{{ route('admin.sponsors.index') }}">
+                        <span><i class="fas fa-rocket mr-2"></i></span>
+                        Gestisci sponsor
+                    </a>
+                </li>
             </ul>
         @endcan
 

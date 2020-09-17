@@ -29,6 +29,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController')->only([
         'index', 'edit', 'update', 'destroy'
     ]);
+    Route::resource('/sponsors', 'SponsorController')->only([
+        'index', 'create', 'store', 'destroy'
+    ]);
 });
 
 Auth::routes();

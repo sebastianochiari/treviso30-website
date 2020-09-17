@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Post;
 use App\Category;
 use App\Rivista;
+use App\Sponsor;
 
 class PagesController extends Controller {
 
@@ -29,7 +30,15 @@ class PagesController extends Controller {
         // rivista
         $latestRivista = Rivista::orderBy('date','desc')->first();
 
-        return view('pages/welcome')->with('latestPosts', $latestPosts)->with('categories', $categories)->with('recentPosts', $recentPosts)->with('latestRivista', $latestRivista);
+        $sponsors = Sponsor::all();
+
+        return view('pages/welcome')->with([
+            'latestPosts' => $latestPosts,
+            'categories' => $categories,
+            'recentPosts' => $recentPosts,
+            'latestRivista' => $latestRivista,
+            'sponsors' => $sponsors
+        ]);
     }
 
 
