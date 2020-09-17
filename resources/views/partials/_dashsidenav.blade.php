@@ -39,14 +39,34 @@
             </li>
         </ul>
 
+        @can('is-admin')
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>area amministrativa</span>
+            </h6>
+            <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('register') ? "active" : "" }}" href="{{ route('register') }}">
+                        <span><i class="fas fa-plus-circle mr-1"></i></span>
+                        Aggiungi utente
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('admin/users') ? "active" : "" }}" href="{{ route('admin.users.index') }}">
+                        <span><i class="fas fa-user mr-2"></i></span>
+                        Gestisci utenti
+                    </a>
+                </li>
+            </ul>
+        @endcan
+
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>area amministrativa</span>
+            <span>Area utente</span>
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="">
                     <span><i class="fas fa-user mr-2"></i></span>
-                    Gestisci utenti
+                    Gestisci profilo
                 </a>
             </li>
         </ul>

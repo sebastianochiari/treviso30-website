@@ -25,5 +25,10 @@ Route::resource('posts', 'PostController');
 Route::resource('riviste', 'RivistaController')->only([
     'index', 'create', 'store', 'destroy'
 ]);
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+    Route::resource('/users', 'UsersController')->only([
+        'index', 'edit', 'update', 'destroy'
+    ]);
+});
 
 Auth::routes();

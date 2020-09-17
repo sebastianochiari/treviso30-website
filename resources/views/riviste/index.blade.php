@@ -31,7 +31,7 @@
                         <th scope="col">Titolo</th>
                         <th scope="col">PDF</th>
                         <th scope="col">Data</th>
-                        <th scope="col"></th>
+                        <th scope="col">Azioni</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,9 +44,9 @@
                         <td>
                             {{ date('F Y', strtotime($rivista->date)) }}
                         </td>
-                        <td style="display: inline-flex">
+                        <td>
                             {!! Form::open(['route' => ['riviste.destroy', $rivista->id], 'method' => 'delete']) !!}
-                            <button type="submit" class="btn btn-danger m-1 confirm-box">
+                            <button type="submit" class="btn btn-danger m-1">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
                             {!! Form::close() !!}

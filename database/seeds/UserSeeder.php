@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+use App\Role;
 
 class UserSeeder extends Seeder
 {
@@ -11,20 +15,25 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        User::truncate();
+        DB::table('role_user')->truncate();
+
+        $adminRole = Role::where('name', 'admin')->first();
+        $authorRole = Role::where('name', 'author')->first();
+
+        $admin = User::create([
             'name' => 'Giampaolo Zorzo',
             'email' => 'treviso30@gmail.com',
             'password' => Hash::make('password'),
         ]);
-        DB::table('users')->insert([
-            'name' => 'Sebastiano Chiari',
-            'email' => 'sebastianochiari8@gmail.com',
+
+        $author = User::create([
+            'name' => 'Paolino Paperino',
+            'email' => 'paolinopaperino@gmail.com',
             'password' => Hash::make('password'),
         ]);
-        DB::table('users')->insert([
-            'name' => 'Pippo Franco',
-            'email' => 'pippofranco@gmail.com',
-            'password' => Hash::make('password'),
-        ]);
+
+        $admin->roles()->attach($adminRole);
+        $author->roles()->attach($authorRole);
     }
 }
