@@ -7,29 +7,42 @@ use App\Category;
 use App\Rivista;
 use App\Sponsor;
 
+/**
+ * General controller with homepage and minor pages
+ *
+ * Class PagesController
+ * @package App\Http\Controllers
+ */
 class PagesController extends Controller {
 
-    # process variable data or parameters
-    # talk to the model
-    # receive data from the model
-    # compile or process data from the model if needed
-    # pass that data to the correct view
-
+    /**
+     * Function to display the homepage
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getIndex() {
-        // ottieni l'ultima rivista
-        // ottieni gli ultimi quattro post
+        // LATEST POSTS
+        // fetch from the DB the latest 4 posts
         $latestPosts = Post::orderBy('id','desc')->limit(4)->get();
-        // categorie
+
+        // CATEGORIES
+        // fetch from the DB all the categories (in order to fill the menu navbar)
         $categories = Category::get();
-        // post recenti per categoria
+
+        // POSTS per CATEGORY
+        // foreach category, fetch from the DB the latest 3 posts
         $recentPosts = collect(new Post);
         for ($i = 1; $i <= count($categories); $i++) {
             $temp = Post::orderBy('id', 'desc')->where('category_id', '=', "$i")->limit(3)->get();
             $recentPosts = $recentPosts->concat($temp);
         }
-        // rivista
+
+        // LATEST RIVISTA
+        // fetch from the DB the latest uploaded rivista
         $latestRivista = Rivista::orderBy('date','desc')->first();
 
+        // SPONSORS
+        // fetch from the DB the sponsors (in order to fill the sponsor column)
         $sponsors = Sponsor::all();
 
         return view('pages/welcome')->with([
@@ -41,18 +54,33 @@ class PagesController extends Controller {
         ]);
     }
 
-
+    /**
+     * Function to display the rivista page with all the magazines
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getMagazine() {
-        // ottieni tutte le riviste con paginazione
+        // RIVISTE
+        // fetch from the DB all the available magazines with pagination
         $riviste = Rivista::orderBy('date', 'desc')->paginate(12);
 
         return view('pages/rivista')->with('riviste', $riviste);
     }
 
+    /**
+     * Function to display the about page
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getAbout() {
         return view('pages/about');
     }
 
+    /**
+     * Function to display the contact page
+     *
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function getContact() {
         return view('pages/contact');
     }

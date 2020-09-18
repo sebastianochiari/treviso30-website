@@ -37,10 +37,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /**
+     * Definition of the many to many relationship
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function roles() {
         return $this->belongsToMany('App\Role');
     }
 
+    /**
+     * Function to check whether the user has any role
+     *
+     * @param $roles to check
+     * @return bool true if it contains any role, false if not
+     */
     public function hasAnyRoles($roles) {
         if($this->roles()->whereIn('name', $roles)->first()) {
             return true;
@@ -48,6 +59,12 @@ class User extends Authenticatable
         return false;
     }
 
+    /**
+     * Function to check whether the user has a specific role
+     *
+     * @param $role to check
+     * @return bool true if yes, false if not
+     */
     public function hasRole($role) {
         if($this->roles()->where('name', $role)->first()) {
             return true;

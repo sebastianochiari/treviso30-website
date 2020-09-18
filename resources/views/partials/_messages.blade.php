@@ -1,28 +1,28 @@
 <div class="m-3">
     @if(Session::has('success'))
 
-    <div class="alert alert-success" role="alert">
+        <div class="alert alert-success" role="alert">
 
-        <strong>Success:</strong> {{ Session::get('success')  }}
+            <strong>Success:</strong> {{ Session::get('success')  }}
 
-    </div>
+        </div>
 
     @endif
 
     @if (count($errors) > 0)
 
-    <div class="alert alert-danger" role="alert">
+        <div class="alert alert-danger" role="alert">
 
-        <strong>Errore:</strong>
-        <ul>
-            @foreach ($errors->all() as $error)
+            <strong>Errore:</strong>
+            <ul>
+                @foreach ($errors->all() as $error)
 
-            <li>{{ $error }}</li>
+                    <li>{{ $error }}</li>
 
-            @endforeach
-        </ul>
+                @endforeach
+            </ul>
 
-    </div>
+        </div>
 
     @endif
 

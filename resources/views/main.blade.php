@@ -9,25 +9,25 @@
 
 <body>
 
-    @if(Auth::check())
+@if(Auth::check())
 
-        @include('partials/_loginToolbar')
+    @include('partials/_loginToolbar')
 
-    @endif
+@endif
 
-    @include('partials/_nav')
+@include('partials/_nav')
 
-    <main role="main" class="container">
+<main role="main" class="container">
 
-        @yield('content')
+    @yield('content')
 
-    </main><!-- /.container -->
+</main><!-- /.container -->
 
-    @include('partials/_footer')
+@include('partials/_footer')
 
-    @include('partials/_defaultJS')
+@include('partials/_defaultJS')
 
-    @yield('scripts')
+@yield('scripts')
 
 </body>
 
