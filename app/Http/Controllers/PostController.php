@@ -127,7 +127,10 @@ class PostController extends Controller
         foreach($categories as $category) {
             $cats[$category->id] = $category->name;
         }
-        return view('posts.edit')->with('post', $post)->with('categories', $cats);
+        return view('posts.edit')->with([
+            'post' => $post,
+            'categories' => $cats
+        ]);
     }
 
     /**

@@ -32,7 +32,7 @@ class NewsController extends Controller
         // return the view and pass in the needed objects
         return view('news.single')->with([
             'mainPost' => $mainPost,
-            'recentPost' => $recentPosts
+            'recentPosts' => $recentPosts
         ]);
     }
 

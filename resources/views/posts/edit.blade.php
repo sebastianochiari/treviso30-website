@@ -38,7 +38,7 @@
                 {{ Form::text('slug', null, array('class' => 'form-control mb-4', 'required' => '', 'minlength' => '5', 'maxlength' => '255')) }}
 
                 {{ Form::label('author', 'Autore:') }}
-                {{ Form::text('author', "$user->name", array('class' => 'form-control mb-4', 'required' => '', 'maxlength' => '255')) }}
+                {{ Form::text('author', "$post->author", array('class' => 'form-control mb-4', 'required' => '', 'maxlength' => '255')) }}
 
                 {{ Form::label('category_id', 'Categoria:') }}
                 {{ Form::select('category_id', $categories, null, ['class' => 'form-control mb-4']) }}
