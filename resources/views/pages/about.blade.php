@@ -15,43 +15,54 @@
         <div id="chi-siamo" class="col-md-8">
             <h4 class="mb-4">Chi siamo</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <b>Treviso30News</b> è, come si evince dal nome, un mensile che vuole essere un contenitore di notizie legate alla Marca Trevigiana, affrontando temi che fanno parte della vita quotidiana di un territorio, ovvero salute, arte, cucina, enogastronomia, spettacoli, politica, cultura, sport, appuntamenti e molti altri argomenti.
             </p>
             <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                A cadenza mensile, la rivista di 84 pagine, tutte a colori e su carta patinata, opaca di gr. 115 viene distribuita, gratuitamente, presso molte edicole del centro, studi professionali, locali pubblici, strutture sportive, ricettive e durante alcuni convegni e congressi oltre, naturalmente, al Palaverde durante le partite casalinghe della De Longhi basket, dell'Imoco volley, a Monigo in occasione delle gare del rugby Benetton, Longarone Fiere, e in circa 220 centri di distribuzione.
+            </p>
+            <p>
+                La tiratura, è di 5.000 copie e, ovviamente, i 220 punti di distribuzione vengono riforniti due/tre volte della rivista nell'arco del mese. Treviso30News è presente anche su Instagram e Facebook.
             </p>
         </div>
         <div class="col-md-4">
-            <div class="redazione-card">
-                <p class="redazione-posizione">direttore responsabile</p>
-                <h5>Giampaolo Zorzo</h5>
-                <p>treviso.trenta@gmail.com</p>
-            </div>
-            <div class="redazione-card">
-                <p class="redazione-posizione">caporedattore</p>
-                <h5>Federico Bettuzzi</h5>
-                <p>mail@mail.com</p>
-            </div>
-            <div class="redazione-card">
-                <p class="redazione-posizione">redazione</p>
-                <div class="redazione-multipli">
-                    <h5>Lorenzo Baldoni</h5>
-                    <p>mail@mail.com</p>
-                </div>
-                <div class="redazione-multipli">
-                    <h5>Ubaldo Saini</h5>
-                    <p>mail@mail.com</p>
-                </div>
-            </div>
+            @for($i = 0; $i < count($redazione); $i++)
+                @if($i == 0)
+                    <div class="redazione-card">
+                        <p class="redazione-posizione">direttore responsabile</p>
+                        <h5><a class="text-black" href="{{ route('pages.redazione', $redazione[$i]->id) }}">{{ $redazione[$i]->name }}</a></h5>
+                    </div>
+                @elseif($i == 1)
+                    <div class="redazione-card">
+                        <p class="redazione-posizione">caporedattore</p>
+                        <h5><a class="text-black" href="{{ route('pages.redazione', $redazione[$i]->id) }}">{{ $redazione[$i]->name }}</a></h5>
+                    </div>
+                @elseif($i == 2)
+                    <div class="redazione-card">
+                        <p class="redazione-posizione">collaboratori</p>
+                        <div class="redazione-multipli">
+                            <h5><a class="text-black" href="{{ route('pages.redazione', $redazione[$i]->id) }}">{{ $redazione[$i]->name }}</a></h5>
+                        </div>
+                        @else
+                            <div class="redazione-multipli">
+                                <h5><a class="text-black" href="{{ route('pages.redazione', $redazione[$i]->id) }}">{{ $redazione[$i]->name }}</a></h5>
+                            </div>
+                        @endif
+                        @if ($i == (count($redazione)-1))
+                    </div>
+                @endif
+            @endfor
             <div class="redazione-card">
                 <p class="redazione-posizione">pubblicità</p>
-                <h5>Alberto Geromel</h5>
-                <p>alberto.trevisonews@gmail.com</p>
+                <h5>Federico De Marchi</h5>
+            </div>
+            <div class="redazione-card">
+                <p class="redazione-posizione">ideazione e progetto grafico</p>
+                <h5>INK IMAGE</h5>
+                <a class="text-black" href="mailto: grafica@inkimage.it">grafica@inkimage.it</a>
             </div>
             <div class="redazione-card">
                 <p class="redazione-posizione">grafica e impaginazione</p>
-                <h5>Giulia Pasqualin</h5>
-                <p>info@giuliapasqualin.com</p>
+                <h5>Elena Pasetto</h5>
             </div>
             <div class="redazione-card">
                 <p class="redazione-posizione">stampatore</p>

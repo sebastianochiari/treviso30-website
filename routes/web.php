@@ -19,6 +19,8 @@ Route::get('news/{slug}', ['as' => 'news.single', 'uses' => 'NewsController@getS
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('rivista', 'PagesController@getMagazine');
+Route::get('redazione/{id}', ['as' => 'pages.redazione', 'uses' => 'RedazioneController@getSingle'])->where('id', '^[0-9]*$');
+Route::get('redazione', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 
 Route::resource('posts', 'PostController');

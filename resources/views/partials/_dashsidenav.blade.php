@@ -25,18 +25,20 @@
                     Gestisci post
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('riviste/create') ? "active" : "" }}" href="{{ route('riviste.create') }}">
-                    <span><i class="far fa-file-alt mr-2"></i></span>
-                    Aggiungi rivista
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ Request::is('riviste') ? "active" : "" }}" href="{{ route('riviste.index') }}">
-                    <span><i class="far fa-copy mr-2"></i></span>
-                    Gestisci riviste
-                </a>
-            </li>
+            @can('is-admin')
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('riviste/create') ? "active" : "" }}" href="{{ route('riviste.create') }}">
+                        <span><i class="far fa-file-alt mr-2"></i></span>
+                        Aggiungi rivista
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('riviste') ? "active" : "" }}" href="{{ route('riviste.index') }}">
+                        <span><i class="far fa-copy mr-2"></i></span>
+                        Gestisci riviste
+                    </a>
+                </li>
+            @endcan
         </ul>
 
         @can('is-admin')

@@ -18,7 +18,7 @@
         <p>
             Viale della Repubblica, 194/a, 31100, Treviso (TV)
             <br>
-            treviso.trenta@libero.it
+            treviso.trenta@gmail.com
             <br>
             +39 334 1119261
         </p>
@@ -27,11 +27,9 @@
     <div class="mt-4">
         <h6>Pubblicità</h6>
         <p>
-            Alberto Geromel
+            Federico De Marchi
             <br>
-            alberto.trevisonews@gmail.com
-            <br>
-            +39 370 7041373
+            +39 393 39596052
         </p>
     </div>
 

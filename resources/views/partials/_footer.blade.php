@@ -12,12 +12,6 @@
             <div class="navbar navbar-expand-lg navbar-light">
                 <ul class="navbar-nav align-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">privacy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">terms</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/about">chi siamo</a>
                     </li>
                     <li class="nav-item">

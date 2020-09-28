@@ -40,6 +40,10 @@
                 <div id="post" class="post-corpo mt-3 mb-5 pt-3 pb-5">
                     {!! $mainPost->body !!}
                 </div>
+                <div class="my-5">
+                    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                    <div class="addthis_inline_share_toolbox"></div>
+                </div>
                 <!-- RELATED POSTS -->
                 <div class="related-posts mt-5">
                     @if(!$recentPosts->isEmpty())
@@ -76,5 +80,12 @@
             </div>
         </div>
     </div>
+
+@endsection
+
+@section('scripts')
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f69fc0f8b51b838"></script>
 
 @endsection

@@ -6,6 +6,7 @@ use App\Post;
 use App\Category;
 use App\Rivista;
 use App\Sponsor;
+use App\Redazione;
 
 /**
  * General controller with homepage and minor pages
@@ -73,7 +74,10 @@ class PagesController extends Controller {
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function getAbout() {
-        return view('pages/about');
+
+        $redazione = Redazione::all();
+
+        return view('pages/about')->with('redazione', $redazione);
     }
 
     /**
