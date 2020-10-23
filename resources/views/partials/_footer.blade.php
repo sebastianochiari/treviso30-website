@@ -3,9 +3,8 @@
         <div id="footer-social" class="footer-blog">
             <p class="pt-4 align-center">seguici su</p>
             <ul class="footer-social mt-3">
-                <li><a href="" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/trevisotrentanews/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/treviso30news/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
         </div>
         <div class="footer-navbar">
@@ -19,6 +18,13 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/posts/create">area riservata</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav align-center">
+                    <li class="nav-item">
+                        <a href="https://www.iubenda.com/privacy-policy/93666445" class="iubenda-white iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
                     </li>
                 </ul>
             </div>
