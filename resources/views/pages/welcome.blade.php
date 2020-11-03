@@ -14,7 +14,11 @@
     <div class="jumbotron p-3 p-md-5 text-white no-border banner-rivista mb-5">
         <div class="col-md-6 px-0 mt-4">
             <h1 class="display-4" style="font-weight: bolder;">L'ultimo numero della rivista è online</h1>
-            <p class="my-3"><a class="text-white rivista-link" style="font-weight: 900;" href="{{ asset('magazine\pdf/' . $latestRivista->pdf_file) }}" target="_blank">Scarica</a> la rivista in formato PDF e rimani mensilmente aggiornato con Treviso30News sulla Marca Trevigiana</p>
+            @if(is_object($latestRivista))
+                <p class="my-3"><a class="text-white rivista-link" style="font-weight: 900;" href="{{ asset('magazine\pdf/' . $latestRivista->pdf_file) }}" target="_blank">Scarica</a> la rivista in formato PDF e rimani mensilmente aggiornato con Treviso30News sulla Marca Trevigiana</p>
+            @else
+                <p class="my-3"><a class="text-white rivista-link" style="font-weight: 900;" href="" target="_blank">Scarica</a> la rivista in formato PDF e rimani mensilmente aggiornato con Treviso30News sulla Marca Trevigiana</p>
+            @endif
         </div>
     </div>
 

@@ -23,3 +23,9 @@
     <title>Treviso30News @yield('title')</title>
 
 @endif
+
+<script type="text/javascript">
+    var _iub = _iub || [];
+    _iub.csConfiguration = {"gdprAppliesGlobally":false,"countryDetection":true,"consentOnContinuedBrowsing":false,"lang":"it","siteId":2040720,"cookiePolicyId":93666445,"cookiePolicyUrl":"https://www.iubenda.com/privacy-policy/93666445", "banner":{ "acceptButtonDisplay":true,"acceptButtonColor":"#0073CE","acceptButtonCaptionColor":"white","rejectButtonColor":"#0073CE","rejectButtonCaptionColor":"white","position":"float-top-center","textColor":"black","backgroundColor":"white" }};
+</script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>

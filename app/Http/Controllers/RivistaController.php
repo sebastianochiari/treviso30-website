@@ -80,9 +80,9 @@ class RivistaController extends Controller
         $extension = $request->file('pdf_file')->extension();
         $filename = $timestamp . '.' . $extension;
         $path = $request->file('pdf_file')->storeAs(
-            'magazine/pdf',
+            '/magazine/pdf/',
             $filename,
-            'public'
+            'public_html'
         );
         $rivista->pdf_file = $filename;
 
@@ -92,7 +92,7 @@ class RivistaController extends Controller
         // flash > only let exists for one request
         Session::flash('success', 'La nuova rivista è stato caricata correttamente!');
 
-        // rederect to another page
+        // redirect to another page
         return redirect()->route('riviste.index');
     }
 
@@ -109,8 +109,8 @@ class RivistaController extends Controller
         $oldIMGName = $rivista->preview_img;
         $oldPDFName = $rivista->pdf_file;
 
-        File::delete(public_path('magazine/img/' . $oldIMGName));
-        File::delete(public_path('magazine/pdf/' . $oldPDFName));
+        Storage::disk('public_html')->delete('/magazine/img/' . $oldIMGName);
+        Storage::disk('public_html')->delete('/magazine/pdf/' . $oldPDFName);
 
         $rivista->delete();
 
