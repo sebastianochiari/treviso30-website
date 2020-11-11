@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Category;
 
 class CategorySeeder extends Seeder
 {
@@ -11,31 +12,46 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
+        Category::truncate();
+
+        Category::create([
+            'id' => '1',
             'name' => 'Cultura',
             'color' => '808080'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '2',
             'name' => 'Economia',
             'color' => '977EF2'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '3',
             'name' => 'Enogastronomia',
             'color' => '448C30'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '4',
             'name' => 'Musica',
             'color' => '2955D9'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '5',
             'name' => 'Storia di Treviso',
             'color' => '0597F2'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '6',
             'name' => 'Benessere',
             'color' => 'F2B90C'
         ]);
-        DB::table('categories')->insert([
+
+        Category::create([
+            'id' => '7',
             'name' => 'Sport',
             'color' => 'F25C05'
         ]);
