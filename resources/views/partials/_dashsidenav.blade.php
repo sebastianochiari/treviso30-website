@@ -70,6 +70,12 @@
                         Gestisci sponsor
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('admin/redazione') ? "active" : "" }}" href="{{ route('admin.redazione.index') }}">
+                        <span><i class="fas fa-layer-group mr-2"></i></span>
+                        Gestisci redazione
+                    </a>
+                </li>
             </ul>
         @endcan
     </div>

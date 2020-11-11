@@ -19,7 +19,7 @@ Route::get('news/{slug}', ['as' => 'news.single', 'uses' => 'NewsController@getS
 Route::get('contact', 'PagesController@getContact');
 Route::get('about', 'PagesController@getAbout');
 Route::get('rivista', 'PagesController@getMagazine');
-Route::get('redazione/{id}', ['as' => 'pages.redazione', 'uses' => 'RedazioneController@getSingle'])->where('id', '^[0-9]*$');
+Route::get('redazione/{id}', ['as' => 'pages.redazione', 'uses' => 'PagesController@getRedazioneById'])->where('id', '^[0-9]*$');
 Route::get('redazione', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 
@@ -34,6 +34,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     ]);
     Route::resource('/sponsors', 'SponsorController')->only([
         'index', 'create', 'store', 'destroy'
+    ]);
+    Route::resource('/redazione', 'RedazioneController')->except([
+        'show'
     ]);
 });
 

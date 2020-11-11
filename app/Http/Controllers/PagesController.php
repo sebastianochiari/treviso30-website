@@ -89,4 +89,17 @@ class PagesController extends Controller {
         return view('pages/contact');
     }
 
+    /**
+     * Function that show a single redazione utente based on the id
+     *
+     * @param $id redazione we want to show
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function getRedazioneById($id){
+
+        $redazione = Redazione::find($id);
+
+        return view('pages.redazione')->with('redazione', $redazione);
+    }
+
 }
