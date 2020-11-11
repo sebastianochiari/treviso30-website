@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Redazione;
+use Session;
+use Purifier;
+use Image;
+use File;
 
 class RedazioneController extends Controller
 {
@@ -80,7 +84,7 @@ class RedazioneController extends Controller
         Session::flash('success', 'Il nuovo membro della redazione è stato aggiunto correttamente!');
 
         // rederect to another page
-        return redirect()->route('admin.redazione');
+        return redirect()->route('admin.redazione.index');
     }
 
     /**
@@ -143,7 +147,7 @@ class RedazioneController extends Controller
         Session::flash('success', 'Il membro della redazione è stato modificato correttamente!');
 
         // rederect to another page
-        return redirect()->route('admin.redazione');
+        return redirect()->route('admin.redazione.index');
     }
 
     /**
@@ -166,6 +170,6 @@ class RedazioneController extends Controller
         Session::flash('success', 'Il membro della redazione è stato eliminato correttamente!');
 
         // rederect to another page
-        return redirect()->route('admin.redazione');
+        return redirect()->route('admin.redazione.index');
     }
 }
