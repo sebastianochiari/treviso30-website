@@ -1,13 +1,19 @@
 @extends('main')
 
+@section('title', ' Treviso30News - Informazione di Marca')
+
+@section('metadata')
+
+    Rimani aggiornato sulla Marca Trevigiana con Treviso 30 News, un mensile contenitore di notizie che affronta temi che fanno parte della vita quotidiana di un territorio, come salute, arte, cucina, enogastronomia, spettacoli, politica, cultura, sport, appuntamenti e molto altro.
+
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', '- Informazione di Marca')
 
 @section('content')
 

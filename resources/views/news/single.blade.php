@@ -1,13 +1,19 @@
 @extends('main')
 
+@section('title')
+    {{ $mainPost->title }} - Treviso30News
+@endsection
+
+@section('metadata')
+    {{ $mainPost->title }}
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', "- $mainPost->title")
 
 @section('content')
     <div class="row mt-3">

@@ -1,13 +1,19 @@
 @extends('main')
 
+@section('title', 'Chi siamo - Treviso30News')
+
+@section('metadata')
+
+    Scopri chi siamo, la mission di Treviso30News e tutta la redazione che lavora alla pubblicazione del mensile sulla Marca Trevigiana.
+
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', '- Chi siamo')
 
 @section('content')
 

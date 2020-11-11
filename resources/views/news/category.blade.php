@@ -1,13 +1,17 @@
 @extends('main')
 
+@section('title', "$category->name - Treviso30News")
+
+@section('metadata')
+    Scopri le ultime novità di {{ $category->name }} su Treviso 30 News, il mensile di informazione della Marca Trevigiana.
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', "- $category->name")
 
 @section('content')
 

@@ -1,13 +1,19 @@
 @extends('main')
 
+@section('title', 'Contattaci - Treviso30News')
+
+@section('metadata')
+
+    Contatta la redazione di Treviso30News per qualsiasi richiesta, proposta o curiosità.
+
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', '- Contattaci')
 
 @section('content')
 

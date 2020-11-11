@@ -39,7 +39,7 @@
                 <div class="col-md-6 text-right">
                     © Treviso30News - Tutti i diritti sono riservati
                     <br>
-                    Realizzato da <a href="https://www.sebastianochiari.com" target="_blank">Sebastiano Chiari</a>
+                    Realizzato da <a href="https://sebastianochiari.github.io/" target="_blank">Sebastiano Chiari</a>
                 </div>
             </div>
         </div>

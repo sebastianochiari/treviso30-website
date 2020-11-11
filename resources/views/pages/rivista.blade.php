@@ -1,13 +1,19 @@
 @extends('main')
 
+@section('title', 'Rivista - Treviso30News')
+
+@section('metadata')
+
+    Scarica la rivista in formato PDF e rimani mensilmente aggiornato con Treviso 30 News sulla Marca Trevigiana.
+
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', '- Informazione di Marca')
 
 @section('content')
 

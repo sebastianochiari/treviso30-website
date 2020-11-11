@@ -1,13 +1,21 @@
 @extends('main')
 
+@section('title')
+    {{$redazione->name}} - Treviso30News
+@endsection
+
+@section('metadata')
+
+    Redazione Treviso 30 News - {{ $redazione->name }}
+
+@endsection
+
 @section('stylesheets')
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ url('/css/style.css') }}">
 
 @endsection
-
-@section('title', '- Chi siamo')
 
 @section('content')
 
