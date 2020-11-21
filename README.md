@@ -1,26 +1,23 @@
-# Rivista Website
-Website for an online newspaper
+## Treviso30News Online Website
+Online website for a local newspaper Treviso30News, with private CMS in order to publish contents such blog posts and magazine and to manage users, the editorial staff and sponsors.
 
-### Struttura
-- `index` landing page con banner promozionale rivista, ultimi articoli pubblicati e selezione di articoli raggruppati per tematica
-- `contatti` pagina con form per essere contattati
-- `redazione` pagina con tutta la redazione, immagine più breve descrizione
-- `argomento` singole pagine in cui vengono mostrati tutti gli articoli in base all'argomento scelto
-- `archivio` archivio delle riviste dove è possibile scaricare i numeri precedenti
-- `single` pagina dedicata al singolo post
+### Setup
+How to setup this Laravel project after you cloned from GitHub.
+1. Clone GitHub repo for this project locally
+        git clone projectname
+2. `cd` into your project
+3. Install Composer Dependencies
+        composer install
+4. Install NPM Dependencies
+        npm install
+5. Create a copy of your .env file
+        cp .env.example .env
 
-### Database in MySQL [SQLite]
-- tabella per gli argomenti
-- tabella per i post (id, autore, data, argomento, testo, slug)
-- tabella per le riviste (id, data, file pdf di riferimento)
-
-Valutare se aggiungere una dashboard accessibile dopo login per la redazione da cui pubblicare i post o sfruttare WordPress / backoffice per la cosa [in caso sarebbe da implementare un servizio di login, tabella per gli utenti e dashboard con pagina per la pubblicazione del post e pagina per la gestione dei post]
-
-### Briefing client
-- rivista in PDF da scaricare
-- archivio della rivista
-- pagina dedicata alla redazione e ai collaboratori
-- a lato, sponsor (BIBANESI, ASTORIA WINES, AUTOFFICINA LENZINI, PIZZERIA SANTA LUCIA, LAGUNA PALACE, DAPINO, BIANCO e CELESTE, RADIME, COMMAUTO, FALCON)
-- stile molto semplice
-- informarsi su Google AdWords
-- articoli di attualità categorizzati (CULTURA (grigio), ECONOMIA (viola), ENOGASTRONOMIA (verde), STORIA di TREVISO (azzurro), BENESSERE (blu), SPORT (arancione))
+6. Generate an app encryption key
+        php artisan key:generate
+7. Create an empty database for our application
+8. In the .env file, add database information to allow Laravel to connect to the database
+9. Migrate the database
+        php artisan migrate
+10. [Semi-Optional]: Seed the database
+        php artisan db:seed
