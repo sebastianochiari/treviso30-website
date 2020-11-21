@@ -23,6 +23,13 @@ Route::get('redazione/{id}', ['as' => 'pages.redazione', 'uses' => 'PagesControl
 Route::get('redazione', 'PagesController@getAbout');
 Route::get('/', 'PagesController@getIndex');
 
+/* routes per il form di contatto per l'asta beneficiaria */
+Route::get('asta-contact', 'AstaContactController@create');
+Route::post('asta-contact', [
+    'uses' => 'AstaContactController@store',
+    'as' => 'contact.store'
+]);
+
 Route::resource('posts', 'PostController');
 Route::resource('riviste', 'RivistaController')->only([
     'index', 'create', 'store', 'destroy'
